@@ -3,7 +3,7 @@ body{
     display: flex;
     position: relative;
     overflow-x: hidden;
-    background: #0a2a43;
+    background: #b7a681;
     min-height: 1500px;
 }
 
@@ -19,22 +19,45 @@ body{
     justify-content:space-between;
 }
 .options{
-    height: 10vh;
-    width: 5vw;
-    background-color: transparent;
-}
-.optionsimg{
     height: 5vh;
     width: 3vw;
-    margin-top: 6px;
-    margin-left: 6px;
+    margin-top: 10px;
+    margin-left: 10px; 
     cursor: pointer;
 }
+.options path{
+    fill:transparent;
+    stroke-width: 20;
+    stroke: white;
+    stroke-dasharray: 1540;
+    stroke-dashoffset: 0;
+}
+.options:hover path{
+    animation: animate-options 2s linear forwards;
+}
+@keyframes animate-options {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1540;
+    }
+    80%{
+        stroke-dashoffset: 3080;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 3080;
+        fill: white;
+       
+    }
+
+}
 .logo{
-    height: 10vh;
-    width: 15vw;
+    height: 20vh;
+    width: 20vw;
     background-color: transparent;
-    margin-left: 70px;
+    margin-left: 150px;
 }
 .logoimg{
     height: 6vh;
@@ -70,17 +93,73 @@ body{
     justify-content: space-around;
     margin-right: 20px;
 }
-.accountimg{
-    height: 6vh;
+.account{
+    height: 5vh;
     width: 3vw;
     margin-top: 10px;
     cursor: pointer;
 }
-.bookingimg{
-    height: 6vh;
+.account path{
+    fill:transparent;
+    stroke-width: 20;
+    stroke: white;
+    stroke-dasharray: 1540;
+    stroke-dashoffset: 0;
+}
+.account:hover path{
+    animation: animate-account 2s linear forwards;
+}
+@keyframes animate-account {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1540;
+    }
+    80%{
+        stroke-dashoffset: 3080;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 3080;
+        fill: white;
+       
+    }
+
+}
+.bookings{
+    height: 5vh;
     width: 3vw;
-    margin-top: 10px;
+    margin-top: 9px;
     cursor: pointer;
+}
+.bookings path{
+    fill:transparent;
+    stroke-width: 20;
+    stroke: white;
+    stroke-dasharray: 1540;
+    stroke-dashoffset: 0;
+}
+.bookings:hover path{
+    animation: animate-bookings 2s linear forwards;
+}
+@keyframes animate-bookings {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1540;
+    }
+    80%{
+        stroke-dashoffset: 3080;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 3080;
+        fill: white;
+       
+    }
+
 }
 
 /*Presentation wrapper*/
@@ -101,7 +180,7 @@ body{
     bottom: 0;
     width: 100vw;
     height: 100px;
-    background: linear-gradient(to top, #0a2a43, transparent);
+    background: linear-gradient(to top, #907e67, transparent);
     z-index: 10000;
 }
 .Presentation::after{
@@ -111,9 +190,9 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #0a2a43;
+/*background: #0a2a43;
     z-index: 10000;
-    mix-blend-mode: color;
+    mix-blend-mode: color;*/
 }
 .Presentation img{
     position: absolute;
@@ -126,9 +205,10 @@ body{
 }
 #text{
     position: relative;
-    color: white;
-    font-size: 10em;
+    color: #907e67;
+    font-size: 5em;
     z-index: 1;
+    margin-top: 220px;
 }
 #road{
     z-index: 2;
