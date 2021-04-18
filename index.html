@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FirstSite</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="Presentation">
+      <img src="./imgs/bg.jpg" alt="" id="bg" />
+      <img src="./imgs/moon.png" alt="" id="moon" />
+      <img src="./imgs/mountain.png" alt="" id="mountain" />
+      <img src="./imgs/road.png" alt="" id="road" />
+      <h2 id="text">Moon Light</h2>
+    </div>
+    <div class="top-bar">
+      <div class="options">
+        <img src="./imgs/options-img.png" alt="" class="optionsimg"/>
+      </div>
+      <div class="logo">
+        <img src="./imgs/logo.PNG" alt="logo" class="logoimg" />
+        <img
+          src="./imgs/logo2-img.png"
+          alt="imgonhover"
+          class="logoimgonhover"
+        />
+      </div>
+      <div class="cart-container">
+        <div class="account">
+          <img src="./imgs/account-img.png" alt="" class="accountimg"/>
+        </div>
+        <div class="bookings">
+          <img src="./imgs/booking-img.png" alt="" class="bookingimg"/>
+        </div>
+      </div>
+    </div>
+    <div class="main-content"></div>
+    <div class="bottom-bar"></div>
+    <script type="text/javascript">
+          let bg = document.getElementById("bg");
+      let moon = document.getElementById("moon");
+      let mountain = document.getElementById("mountain");
+      let road = document.getElementById("road");
+      let text = document.getElementById("text");
+
+      window.addEventListener('scroll', function(){
+          var value = window.scrollY;
+
+          bg.style.top = value * 0.5 + 'px';
+          moon.style.left = -value * 0.5 + 'px';
+          mountain.style.top = -value * 0.15 + 'px';
+          road.style.top = value * 0.15 + 'px';
+          text.style.top = value * 1 + 'px';
+      })
+    </script>
+  </body>
+</html>
